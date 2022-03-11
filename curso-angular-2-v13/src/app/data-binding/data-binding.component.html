@@ -10,7 +10,17 @@
 <button [disabled]="btnDisabled">Button Disabled Property Binding</button>
 <br>
 <img [src]="imgSrc">
-
 <hr>
 
 <h1>Event Binding</h1>
+<button (click)="alertaInfo()">Click simples</button>
+<br>
+<button (click)="alertaInfoParameter('PARAMETRO OK')">Click com Parametro</button>
+<br>
+<button (click)="alertaInfoParameterEvento($event)">Click com Parametro Evento</button>
+<br>
+<div (mousemove)="mouseMoveEvent($event)" style="background: red; width: 300px; height: 300px;">
+{{position.x}}
+{{position.y}}
+</div>
+
