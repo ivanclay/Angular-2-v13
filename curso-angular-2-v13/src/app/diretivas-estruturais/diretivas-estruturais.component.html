@@ -1,0 +1,17 @@
+<h1>Diretivas</h1>
+<button (click)="addToList()">addToList</button>
+<ul>
+  <li *ngFor="let item of list; let i = index" (click)="removerElemento(i)">[{{i}}] - {{item.nome}} - {{item.idade}}</li>
+</ul>
+<hr>
+<button (click)="cClick()">conditionClick</button>
+<p *ngIf="conditionClick">True</p>
+<p *ngIf="!conditionClick">False</p>
+<hr>
+<p *ngIf="condition">diretivas-estruturais works!</p>
+<hr>
+ <p *ngIf="condition; else elseBlock">True</p>
+<ng-template #elseBlock>
+  <p>False</p>
+</ng-template>
+
