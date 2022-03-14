@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
+  <app-input [contador]="addValue"></app-input>
+  <hr>
   <app-new-component></app-new-component>
   <hr>
   <app-diretivas-atributos></app-diretivas-atributos>
@@ -15,5 +17,7 @@ import { Component } from '@angular/core';
   <router-outlet></router-outlet>`
 }) //fazendo de um modo diferente
 export class AppComponent {
+  public addValue: number = 10;
+
   title = 'curso-angular-2-v13';
 }
