@@ -1,4 +1,13 @@
 <h1>Diretivas</h1>
+<hr>
+<input [(ngModel)] = "nome">
+
+<div [ngSwitch]="nome">
+  <div *ngSwitchCase="'Beleza'">Blz</div>
+  <div *ngSwitchDefault>Deu ruim! Pesquise por Beleza...</div>
+</div>
+
+<hr>
 <button (click)="addToList()">addToList</button>
 <ul>
   <li *ngFor="let item of list; let i = index" (click)="removerElemento(i)">[{{i}}] - {{item.nome}} - {{item.idade}}</li>

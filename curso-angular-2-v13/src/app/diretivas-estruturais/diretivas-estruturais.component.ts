@@ -12,7 +12,8 @@ export class DiretivasEstruturaisComponent implements OnInit {
   public list: Array<{nome:string, idade: number}> = [
     {nome: "José",  idade: 2150},
     {nome: "Maria", idade: 2148},
-  ]
+  ];
+  public nome: string = "qwerty";
 
   constructor() { }
 
