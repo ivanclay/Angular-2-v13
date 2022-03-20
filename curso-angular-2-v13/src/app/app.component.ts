@@ -3,6 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
+  <app-food-add></app-food-add>
+  <app-food-list></app-food-list>
+  <br>
   <ng-template [ngIf]="getDados">
     <h1>{{getDados.nome}}</h1>
     <h2>{{getDados.idade}}</h2>
