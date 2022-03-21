@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
+  <app-forms></app-forms>
+  <br>
   <app-food-add></app-food-add>
   <app-food-list></app-food-list>
   <br>
@@ -26,6 +28,7 @@ import { Component } from '@angular/core';
   <router-outlet></router-outlet>`
 }) //fazendo de um modo diferente
 export class AppComponent {
+  public destruir: boolean = true;
   public addValue: number = 10;
   public getDados: {nome: string, idade: number} | undefined;
 
