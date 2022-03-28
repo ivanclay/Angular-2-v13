@@ -7,7 +7,12 @@ import { SobreComponent } from './pages/sobre/sobre.component';
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full'},
   // { path: 'home', component: HomeComponent },
-  { path: 'sobre/:id/:username', component: SobreComponent },
+  //{ path: 'sobre/:id/:username', component: SobreComponent },
+  { path: 'sobre', component: SobreComponent, children: [
+    { path: ':id/:username', component: SobreComponent },
+  ] },
+  { path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardModule ) } //lazy loading
   { path: '404', component: PageErrorComponent },
   { path: '**', redirectTo: '404' }
 ];
