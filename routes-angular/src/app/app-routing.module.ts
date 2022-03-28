@@ -7,7 +7,7 @@ import { SobreComponent } from './pages/sobre/sobre.component';
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full'},
   // { path: 'home', component: HomeComponent },
-  { path: 'sobre', component: SobreComponent },
+  { path: 'sobre/:id/:username', component: SobreComponent },
   { path: '404', component: PageErrorComponent },
   { path: '**', redirectTo: '404' }
 ];
