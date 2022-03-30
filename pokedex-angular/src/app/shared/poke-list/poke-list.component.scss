@@ -3,6 +3,7 @@
 $padding: rem-calc(20);
 
 :host {
+  width: 100%;
 
   display: flex;
   justify-content: space-between;
@@ -19,9 +20,12 @@ $padding: rem-calc(20);
     height: rem-calc((157 - 40));
 
     margin-bottom: rem-calc(10);
-    padding: rem-calc(20);
+    padding: $padding;
 
     border-radius: rem-calc(10);
+
+    text-decoration: none;
+    color: var(--primary-color);
 
     &__status {
       h2 {
