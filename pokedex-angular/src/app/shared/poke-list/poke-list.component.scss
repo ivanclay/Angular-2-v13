@@ -1,12 +1,13 @@
 @import '../../../config-scss/rem-calc.scss';
 
-//$padding: 0;
+$padding: rem-calc(20);
 
 :host {
 
   display: flex;
   justify-content: space-between;
 
+  padding: $padding 0;
 
 	.pokemon {
     position: relative;
@@ -14,7 +15,7 @@
     background: var(--branco);
 
     width: calc(49% - 2.5rem);
-    height: rem-calc(157 - 40);
+    height: rem-calc((157 - 40));
     padding: rem-calc(20);
 
     border-radius: rem-calc(10);
