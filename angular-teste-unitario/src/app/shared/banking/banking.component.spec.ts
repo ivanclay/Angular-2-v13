@@ -1,7 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ListComponent } from '../investiments/components/list/list.component';
 
 import { BankingComponent } from './banking.component';
+import { ListComponent } from '../investiments/components/list/list.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('BankingComponent', () => {
   let component: BankingComponent;
@@ -9,9 +10,9 @@ describe('BankingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BankingComponent, ListComponent ]
-    })
-    .compileComponents();
+      declarations: [BankingComponent, ListComponent],
+      imports: [HttpClientTestingModule],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -48,8 +49,8 @@ describe('BankingComponent', () => {
   });
 
   it(`
-    (U) setSacar(): shoud transfer poupanca dont have string (isNaN)
-    or poupanca < value
+    (U) setSacar(): shoud transfer poupaca dont have string (isNaN)
+    or poupaca < value
   `, () => {
     expect(component.setSacar('string')).not.toBeTruthy();
     expect(component.setSacar('100')).not.toBeTruthy();
@@ -83,5 +84,4 @@ describe('BankingComponent', () => {
     fixture.detectChanges();
     expect(el.querySelector('#get-poupanca').textContent).toEqual('20');
   });
-
 });
